@@ -1,4 +1,4 @@
-def findLHS(self, nums) -> int:
+def findLHS(nums) -> int:
     left = 0
     right = 1
     result = 0
@@ -12,3 +12,5 @@ def findLHS(self, nums) -> int:
         else:
             left += 1
     return result
+
+print(findLHS([1,3,2,2,5,2,3,7]))
