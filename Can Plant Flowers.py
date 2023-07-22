@@ -5,3 +5,5 @@ def canPlantFlowers(flowerbed, n):
             bed[i] = 1
             n -= 1
     return n <= 0
+
+print(sorted([-100, -2, 1, 2, 3]))
