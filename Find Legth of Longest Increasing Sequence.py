@@ -1,17 +1,14 @@
-def findLHS(nums):
-    trackerA = 0
-    counterA = 1
+def findLIS(nums):
+    counter = 0
+    res = 0
     i, j = 0, 1
-    while i < len(nums) - 1:
-        counterB = 1
+    while j < len(nums):
         diff = nums[j] - nums[i]
-        if diff == trackerA:
-            counterA += 1
-            counterB += 1
+        if diff > 0:
+            counter += 1
+            res += max(res, counter)
         else:
-            trackerA = diff
-            counterB = 1
-            counterA = max(counterA, counterB)
+            counter = 0
         i += 1
         j += 1
-    return counterA
+    return res
